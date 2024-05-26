@@ -1,0 +1,24 @@
+[versions]
+springBoot = "3.2.3"
+bootDependency = "1.1.4"
+jjwt = "0.11.5"
+mapStructVersion = "1.6.0.Beta1"
+h2 = "2.2.224"
+
+[libraries]
+lombok = { module = "org.projectlombok:lombok" }
+security = { module = "org.springframework.boot:spring-boot-starter-security" }
+jjwtApi = { module = "io.jsonwebtoken:jjwt-api" , version.ref = "jjwt" }
+jjwtImpl = { module = "io.jsonwebtoken:jjwt-impl" , version.ref = "jjwt" }
+jjwtJasckson = { module = "io.jsonwebtoken:jjwt-jackson" , version.ref = "jjwt" }
+webmvc = { module = "org.springframework.boot:spring-boot-starter-web" }
+webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
+jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+mapstruct = { module = "org.mapstruct:mapstruct", version.ref = "mapStructVersion" }
+mapstructProcessor = { module = "org.mapstruct:mapstruct-processor", version.ref = "mapStructVersion" }
+redis = { module = "org.springframework.boot:spring-boot-starter-data-redis" }
+h2 = { module = "com.h2database:h2", version.ref = "h2" }
+
+[plugins]
+springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
+bootDependency = { id = "io.spring.dependency-management", version.ref = "bootDependency" }
