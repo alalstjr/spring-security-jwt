@@ -8,6 +8,6 @@ spring:
       - id: SERVICE-USER
         uri: ${uri.service.user}
         predicates:
-          - Path=/user
+          - Path=/service-user
 
 uri.service.user: http://localhost:9010

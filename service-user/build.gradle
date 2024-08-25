@@ -19,7 +19,7 @@ dependencies {
 	compileOnly libs.lombok
 	annotationProcessor libs.lombok
 	// Spring Web
-	implementation libs.springWeb
+	implementation libs.web
 }
 
 tasks.named('test') {

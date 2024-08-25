@@ -1,0 +1,18 @@
+version: "3.8" # 파일 규격 버전
+services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
+  ##MySQL
+  mysql: # 서비스 명
+    image: mysql:8.0.35 # 사용할 이미지
+    restart: always
+    container_name: mysql # 컨테이너 이름 설정
+    ports:
+      - "3306:3306" # 접근 포트 설정 (컨테이너 외부:컨테이너 내부)
+    environment: # -e 옵션
+      MYSQL_ROOT_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: security
+      TZ: Asia/Seoul
+    # 명렬어 설정 O
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci

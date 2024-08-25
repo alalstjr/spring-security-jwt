@@ -19,7 +19,12 @@ dependencies {
 	compileOnly libs.lombok
 	annotationProcessor libs.lombok
 	// Gateway
-	implementation libs.springGateway
+	implementation libs.gateway
+	// Security
+	implementation libs.security
+	// R2DBC
+	implementation libs.r2dbc
+	implementation libs.r2dbcMysql
 }
 
 tasks.named('test') {
