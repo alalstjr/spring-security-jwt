@@ -1,0 +1,13 @@
+server:
+  port: 9000
+
+spring:
+  application.name: ${SERVER_NAME:SERVER-GATEWAY}
+  cloud.gateway:
+    routes:
+      - id: SERVICE-USER
+        uri: ${uri.service.user}
+        predicates:
+          - Path=/user
+
+uri.service.user: http://localhost:9010

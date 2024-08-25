@@ -1,1 +1,4 @@
-rootProject.name = 'demo'
+rootProject.name = "security"
+
+include("server-gateway")
+include("service-user")

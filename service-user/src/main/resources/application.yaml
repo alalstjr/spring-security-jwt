@@ -1,0 +1,3 @@
+server:
+  port: 9010
+spring.application.name: ${SERVER_NAME:SERVICE-USER}

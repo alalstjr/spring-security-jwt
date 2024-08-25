@@ -1,0 +1,36 @@
+plugins {
+	id 'java'
+	alias(libs.plugins.springBoot)
+	alias(libs.plugins.springDependency)
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Lombok
+	compileOnly libs.lombok
+	annotationProcessor libs.lombok
+	// Gateway
+	implementation libs.springGateway
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+tasks.named('bootJar') {
+	mainClass.set("com.study.security.GatewayApplication")
+	archiveFileName = "app.jar"
+}
+
+tasks.named('jar') {
+	enabled = true
+}
