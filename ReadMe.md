@@ -338,7 +338,7 @@ tasks.named('jar') {
 ### server-gateway 구동 확인
 서버 실행 후 정상적으로 구동하는지 확인합니다.
 
-![server-gateway_구동_확인](./images/server-gateway_구동_확인.png)
+![server-gateway_구동_확인](./images/server-gateway_구동_확인.png)
 
 ## service-user Gradle 수정
 **build.gradle 수정**
@@ -398,7 +398,7 @@ public class UserController {
 }
 ~~~
 
-![service-user_구동_확인](./images/service-user_구동_확인.png)
+![service-user_구동_확인](./images/service-user_구동_확인.png)
 
 ## server-gateway routes 설정
 > server-gateway/resources/application.yaml
