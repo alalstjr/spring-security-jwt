@@ -398,7 +398,7 @@ public class UserController {
 }
 ~~~
 
-![service-user_구동_확인](./images/service-user_구동_확인.png)
+![service-user_구동_확인](./images/service-user_check.png)
 
 ## server-gateway routes 설정
 > server-gateway/resources/application.yaml
