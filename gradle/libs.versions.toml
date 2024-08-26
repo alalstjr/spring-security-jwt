@@ -4,6 +4,7 @@ springBoot = "3.3.3"
 springDependency = "1.1.6"
 gateway = "4.1.5"
 r2dbcMysql = "1.3.0"
+jjwt = "0.11.5"
 
 [libraries]
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
@@ -12,6 +13,10 @@ web = { module = "org.springframework.boot:spring-boot-starter-web" }
 security = { module = "org.springframework.boot:spring-boot-starter-security" }
 r2dbc = { module = "org.springframework.boot:spring-boot-starter-data-r2dbc" }
 r2dbcMysql = { module = "io.asyncer:r2dbc-mysql", version.ref = "r2dbcMysql" }
+jjwtApi = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jjwt" }
+jjwtImpl = { module = "io.jsonwebtoken:jjwt-impl", version.ref = "jjwt" }
+jjwtJasckson = { module = "io.jsonwebtoken:jjwt-jackson" , version.ref = "jjwt" }
+redisReactive = { module = "org.springframework.boot:spring-boot-starter-data-redis-reactive" }
 
 [plugins]
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }

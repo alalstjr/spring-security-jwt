@@ -25,6 +25,12 @@ dependencies {
 	// R2DBC
 	implementation libs.r2dbc
 	implementation libs.r2dbcMysql
+	// JWT
+	implementation libs.jjwtApi
+	implementation libs.jjwtImpl
+	implementation libs.jjwtJasckson
+	// Redis
+	implementation libs.redisReactive
 }
 
 tasks.named('test') {

@@ -38,7 +38,9 @@
 ![API_Gateway_구상도](./images/문서_설명.png)
 
 Spring Security와 Spring Gateway를 활용해 실무에서 인증/인가를 효과적으로 관리하는 방법을 설명하려고 합니다.  
-이 방법은 인증/인가를 중앙에서 관리하고, 다른 어플리케이션은 비즈니스 로직에 집중할 수 있도록 역할을 분리하는 것이 핵심입니다.
+이 방법은 인증/인가를 중앙에서 관리하고, 다른 어플리케이션은 비즈니스 로직에 집중할 수 있도록 역할을 분리하는 것이 핵심입니다.  
+그러므로 WebFlux 를 중심으로 코드가 구현되어 있음을 말씀드립니다.  
+Reactive 코드가 아닌 구현은 Spring Security 공식 문서를 확인하면서 설정만 변경하면 정상 동작 합니다.   
 
 ## 아키텍처 개요  
 먼저, Spring Gateway는 모든 요청을 중앙에서 받아들이고, 인증/인가를 처리한 후 해당 요청을 각 서비스로 전달하는 역할을 합니다.   
@@ -646,3 +648,11 @@ http://localhost:9000/user/join
     "roleName": "ROLE_ADMIN"
 }
 ~~~
+
+# 로그인 구현
+
+## JWT 발급
+
+### GatewayFilter
+
+JwtAuthenticationGatewayFilter 클라이언트의 JWT 유효한지 확인하거나 재발급을 관리하는 Filter 입니다.  

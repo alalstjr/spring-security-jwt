@@ -16,3 +16,9 @@ services: # 이 항목 밑에 실행하려는 컨테이너 들을 정의
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    restart: always

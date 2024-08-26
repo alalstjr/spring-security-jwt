@@ -8,6 +8,18 @@ spring:
       - id: SERVICE-USER
         uri: ${uri.service.user}
         predicates:
-          - Path=/service-user
+          - Path=/admin
+        filters:
+          - name: JwtAuthenticationGatewayFilter
+            args:
+              roles: ROLE_USER
 
 uri.service.user: http://localhost:9010
+
+jwt:
+  access:
+    expiration_time: 1800 #2시간
+  refresh:
+    expiration_time: 7200 #1일
+  secret:
+    key: ClwEyWE46t9V4d557TejMnVUEzblYcfcdqe08f7MGVA9SKHd
